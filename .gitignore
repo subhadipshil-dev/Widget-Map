@@ -3,5 +3,4 @@ logo.svg
 logo.png
 *.lock
 .DS_Store
-dist/
 node_modules/
