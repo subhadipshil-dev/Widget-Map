@@ -215,7 +215,6 @@ const App: React.FC = () => {
                   onUpdate={handleUpdateWidget}
                   onDelete={handleDeleteWidget}
                   onDragStart={handleWidgetDragStart}
-                  isDarkMode={isDarkMode}
                 />
               </div>
             ))
@@ -236,7 +235,6 @@ const App: React.FC = () => {
           <AnalyticsPanel
             analytics={analytics}
             onClose={() => setShowAnalytics(false)}
-            isDarkMode={isDarkMode}
           />
         )}
       </div>
@@ -246,7 +244,6 @@ const App: React.FC = () => {
         <CreateWidgetModal
           onClose={() => setShowCreateModal(false)}
           onCreate={handleCreateWidget}
-          isDarkMode={isDarkMode}
         />
       )}
     </div>

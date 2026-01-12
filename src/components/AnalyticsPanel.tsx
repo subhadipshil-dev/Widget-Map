@@ -5,10 +5,9 @@ import { Analytics } from '../types';
 interface AnalyticsPanelProps {
   analytics: Analytics;
   onClose: () => void;
-  isDarkMode?: boolean;
 }
 
-const AnalyticsPanel: React.FC<AnalyticsPanelProps> = ({ analytics, onClose, isDarkMode = false }) => {
+const AnalyticsPanel: React.FC<AnalyticsPanelProps> = ({ analytics, onClose }) => {
   const [view, setView] = useState<'summary' | 'details'>('summary');
 
   return (

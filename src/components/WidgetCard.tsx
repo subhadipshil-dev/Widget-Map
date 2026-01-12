@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Widget, COLOR_MAP, ColorOption } from '../types';
-import { X, Trash2, Check, Edit2, Stamp } from 'lucide-react';
+import { X, Check, Edit2, Stamp } from 'lucide-react';
 
 interface WidgetCardProps {
   widget: Widget;
   onUpdate: (id: string, updates: Partial<Widget>) => void;
   onDelete: (id: string) => void;
   onDragStart: (e: React.DragEvent, id: string) => void;
-  isDarkMode?: boolean;
 }
 
 const StampBadge: React.FC<{ stamp?: string }> = ({ stamp }) => {
@@ -27,7 +26,7 @@ const StampBadge: React.FC<{ stamp?: string }> = ({ stamp }) => {
   );
 };
 
-const WidgetCard: React.FC<WidgetCardProps> = ({ widget, onUpdate, onDelete, onDragStart, isDarkMode = false }) => {
+const WidgetCard: React.FC<WidgetCardProps> = ({ widget, onUpdate, onDelete, onDragStart }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [title, setTitle] = useState(widget.title);
   const [content, setContent] = useState(widget.content);

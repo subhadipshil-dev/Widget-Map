@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Widget, ColorOption, COLOR_MAP } from '../types';
 import { Plus } from 'lucide-react';
 
 interface CreateWidgetModalProps {
   onClose: () => void;
   onCreate: (widget: Omit<Widget, 'id' | 'zIndex'>) => void;
-  isDarkMode?: boolean;
 }
 
-const CreateWidgetModal: React.FC<CreateWidgetModalProps> = ({ onClose, onCreate, isDarkMode = false }) => {
+const CreateWidgetModal: React.FC<CreateWidgetModalProps> = ({ onClose, onCreate }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [color, setColor] = useState<ColorOption>('yellow');

@@ -1,7 +1,6 @@
-import { Widget, Analytics } from './types';
+import { Widget, Analytics } from '../types';
 
 const STORAGE_KEY = 'widget-notes-data';
-const ANALYTICS_KEY = 'widget-notes-analytics';
 
 export const storageService = {
   // Widget operations
